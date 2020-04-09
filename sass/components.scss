@@ -1,0 +1,638 @@
+
+@mixin largeInput{
+   
+    height: 3rem;
+    border-radius: 3rem; 
+}
+
+@mixin select {
+    border-radius: 3rem; 
+  
+    height: 2.5rem;
+}
+
+
+////////////////////////////////////////////////////
+/////logo
+.logo{
+    height:3.25rem;
+    margin-left: 2rem;
+    border-radius: 50%;
+
+}
+
+//////////////////////////////////////////////  
+/////Search
+
+.search{
+    // background-color: orangered;
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color:inherit;
+        background-color: var(--color6);
+        border:none;
+        padding:.7rem 2rem;
+        border-radius: 100px;
+        width:95%;
+        transition: all .2s;
+        margin-right: -3.25rem;
+
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--color7);
+        }
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: var(--color1);
+        }
+    }
+    &__input:focus + &__button {
+        background-color: var(--color7);
+    }
+    &__button{
+         
+            &:focus{
+                outline:none;
+            }
+            &:active{
+                transform:translateY(2px)
+            }
+    }
+    &__icon{
+        height:2rem;
+        width:2rem;
+        fill: var( --color2)
+    }
+}
+
+//////////////////////////////////////////////  
+/////User Navigation
+
+.user-nav{
+    // background-color: greenyellow;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    
+    & > * {//// select all dirrect children selector of user-nav class
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    & > *:hover{//// select all direct children of user-nav class and then on hover
+        background-color: var(--color6);
+    }
+    &__icon-box{
+       position: relative;
+    }
+    &__icon{
+        height:2.25rem;
+        width: 2.25rem;
+        fill: var(--color2);
+        
+    }
+    &__notification{
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color:darkred;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 1.5rem;
+        right: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    &__user-photo{
+        height:3.75rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+  
+}
+
+//////////////////////////////////////////////  
+/////Side Nagigation
+
+.side-nav{
+    font-size: 1.4rem;
+    list-style: none;
+    margin-top: 3.5rem;
+    &__item{
+        position: relative;
+        &:not(::last-child){
+            margin-bottom: .5rem;
+        }
+    }
+    &__item::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: var(--color5);
+        transform: scaleY(0);
+        // transform-origin: bottom;
+        transition: transform .2s,
+                    width .4s cubic-bezier(1,0,0,1) .2s,
+                    background-color .2s;
+    }
+
+    &__item:hover::before,
+    &__item--active::before{
+        transform: scaleY(1);
+        width: 100%;
+    }
+
+    &__item:active::before{
+        background-color:var(--color5a) ;
+    }
+    &__link:link,
+    &__link:visited{
+        color:white;
+        text-decoration: none;
+        text-transform: uppercase;
+        display:block;
+        position: relative;
+        z-index: 10;
+        padding:1.5rem 6rem;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    &__icon{
+        width:1.75rem;
+        height: 1.75rem;
+        margin-right: 2rem;
+        fill:currentColor;
+    }
+}
+
+//////////////////////////////////////////////  
+/////Legal Text
+
+.legal{
+    font-size: 1.2rem;
+    color:var( --color6);
+    text-align: center;
+    padding: 2.5rem;
+}
+
+//////////////////////////////////////////////  
+/////Gallery
+
+.gallery{
+    display:flex;
+
+    &__photo{
+        width: 100%;
+        display: block;
+    }
+}
+
+/////////////////////////////////////////////////////////////
+/////// Booking  Section 
+
+.booking{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--color5);
+    height: 30rem;
+    color: white;
+    font-size: 1.7rem;
+    &__details{
+        padding: 3rem 3rem;
+        height: 23rem;
+    }
+    &__group1{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        padding: 1.5rem;
+        
+
+    }
+    &__dates--input{
+        
+        @include largeInput;
+        margin-left: 1.5rem;
+        width: 17vw;
+    }
+  
+    &__group2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.2rem 1.2rem;
+    }
+    &__select{
+        width: 10vw;
+        @include select;
+        margin-left: 1.5rem;
+        text-align: center;
+        &--rooms{
+           margin-left: 4rem;
+       }
+    }
+
+    &__adults{
+        position: relative;
+        right: 3.5rem;
+    }
+    &__children{
+        position: relative;
+        right: 6.5rem;
+    }
+    &__space{
+        visibility: hidden;
+    }
+    &__button{
+        font-size: 1.3rem;
+        font-weight: 300;
+        width: 17rem;
+        height: 3.2rem;
+        text-transform: uppercase;
+        border-radius: 100px;
+        border: none;
+        background-color: gray;
+        color:white ;
+        position: relative;
+        left: 10rem;
+
+        &:hover{
+        background-color: white;
+        color:var(--color5);
+        }
+    }
+////////////////////////////////////////////////////////////////////////////////////////////////////@include
+////////////Rental section rental page
+     &__pick-up{
+        &--input{
+            @include largeInput;
+            width: 35rem;
+            margin-left: 3rem;
+        }
+     }
+     &__drop-off{
+         position: relative;
+         right: 10rem;
+        &--input{
+            @include largeInput;
+            width: 35rem;
+            position: relative;
+            left: 6rem;
+       
+        }
+         &--label{
+            position: relative;
+            left: 2rem;
+        }  
+     }
+    &__dropoff-dates--input{
+        @include select
+    }
+    &__pickup-dates--input{
+        @include select
+    }
+    &__pick-uptime{
+        position: relative;
+        right: 3rem;
+    }
+    &__drop-offtime{
+        position: relative;
+        right: 4rem;
+    }
+    &__dropoff-dates{
+        position: relative;
+        right: 1.5rem;
+    }
+}
+
+
+
+/////////////////////////////////////////////////////
+///////// HOTEL OVERVIEW
+
+.overview{
+    display: flex;
+    border-bottom:6px solid gray ;
+    align-items: center;
+    &__heading{
+        font-size: 2rem;
+        font-weight: 200;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding: 1.5rem 1.5rem;
+    }
+    &__stars{
+        margin-right: auto;
+        display: flex;
+    }
+    &__icon-star,
+    &__icon-location{
+        height: 1.75rem;
+        width: 1.75rem;
+        fill: var( --color7);
+        margin-right: 1rem;
+    }
+    &__location{
+        font-size: 1.2rem;
+        display:flex;
+        vertical-align: center;
+    }
+    &__rating{
+        background-color: var(--color5);
+        margin-left: 3rem;
+        color:white;
+        align-self: stretch;
+        padding: 0 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    &__rating-average{
+        font-size: 2.7rem;
+        font-weight: 300;
+        margin-bottom: -3px;
+    }
+    &__rating-count{
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
+}
+
+// //////////////////////////////////////////////////////////
+///////button inline
+
+.btn-inline {
+    border:none;
+    color: var(--color2);
+    font-size: inherit;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        color:var(--color4)
+    }
+    &:focus{
+        outline:none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+@keyframes pulsate {
+    0%{
+        tranform:scale(1);
+        box-shadow: none;
+    }
+    50%{
+        tranform:scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+    100%{
+        tranform:scale(1);
+        box-shadow: none;
+    }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// PARAGRAPH
+.paragraph:not(:last-of-type) {
+    margin-bottom: 2rem;
+}
+
+
+
+////////////////////////////////////////
+// LIST
+.list {
+    list-style: none;
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: var(--line);
+    border-bottom: var(--line);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        flex: 0 0 50%;
+        margin-bottom: .7rem;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        // Older browsers
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
+
+        //Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color5);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+        
+    }
+}
+
+
+
+////////////////////////////////////////
+// RECOMMEND
+.recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+
+    display: flex;
+    align-items: center;
+
+    &__count {
+        margin-right: auto;
+    }
+
+    &__friends {
+        display: flex;
+    }
+
+    &__photo {
+        box-sizing: content-box;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+
+        &:not(:last-child) {
+            margin-right: -2rem;
+        }
+    }
+}
+
+
+////////////////////////////////////////
+// REVIEWS
+.review {
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        z-index: 10;
+        position: relative;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+
+    &__photo {
+        height: 4.5rem;
+        width: 4.5rem;
+        border-radius: 50%;
+        margin-right: 1.5rem;
+    }
+
+    &__user-box {
+        margin-right: auto;
+    }
+
+    &__user-name {
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: .4rem;
+    }
+
+    &__user-date {
+        font-size: 1rem;
+        color: var(--color-grey-dark-3);
+    }
+
+    &__rating {
+        color: var(--color5);
+        font-size: 2.2rem;
+        font-weight: 300;
+    }
+
+    &::before {
+        content: "\201C";
+        position: absolute;
+        top: -2.75rem;
+        left: -1rem;
+        line-height: 1;
+        font-size: 20rem;
+        color: var(--color-grey-light-2);
+        font-family: sans-serif;
+        z-index: 1;
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.cta {
+    padding: 3.5rem 0;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
+    &__book-now {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+////////////////////////////////////////
+// CALL TO ACTION
+.btn {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    background-image: linear-gradient(to right, var(--color5), var(--color5a));
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+ 
+   
+    & > * {
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        transition: all .2s;
+    }
+
+    &__visible {
+        padding: 2rem 7.5rem;
+    }
+
+    &__invisible {
+        position: absolute;
+        padding: 2rem 0;
+        left: 0;
+        top: -100%;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
+        color: black;
+    }
+
+    &:hover &__visible {
+        transform: translateY(100%);
+    }
+
+    &:hover &__invisible {
+        top: 0;
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}

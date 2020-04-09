@@ -1,0 +1,212 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="img/logo-hotel2.jpg">
+        
+        <title>Kimbo &mdash;Travel App</title>
+    </head>
+    <body>
+     
+          <header class="header">
+             <img src="img/logo-hotel2.jpg" alt="Kimbo logo" class="logo">
+             <form action="#" class="search">
+                 <input type="text" class="search__input" placeholder="search hotels">
+                 <!-- <button class="search__button">
+                     
+                    <svg class="search__icon">
+                        <use xlink:href="img/sprite.svg#icon-magnifying-glass">
+                        </use>
+                        
+                    </svg>
+                 </button> -->
+                 <div class="search__button">
+                     <span>🏸</span>
+                 </div>
+             </form>
+             <nav class="user-nav">
+                 <div class="user-nav__icon-box">
+                     <svg class="user-nav__icon">
+                         <use xlink:href="img/sprite.svg#icon-bookmark">
+                        </use>
+                     </svg>
+                     <span class="user-nav__notification">
+                         7
+                     </span>
+                    </div>
+                    <div class="user-nav__icon-box">
+                        <svg class="user-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-chat"> 
+                           </use>
+                        </svg>
+                        <span class="user-nav__notification">
+                            13
+                        </span>  
+                       </div> 
+                       <div class="user-nav__user">
+                            <img src="img/user-val.jpg" alt="user-photo" class="user-nav__user-photo" >
+                            <span class="user-nav__user-name">Valery</span>
+                       </div>  
+             </nav>
+             
+          </header>
+          <div class="container">
+          <div class="content">
+              <nav class="sidebar">
+                <ul class="side-nav">
+                    <li class="side-nav__item ">
+                        <a href="index.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-home"></use>
+                            </svg>
+                            <span>Hotel</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item ">
+                        <a href="flight.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use>
+                            </svg>
+                            <span>Flight</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item side-nav__item--active">
+                        <a href="car.html" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-key"></use>
+                            </svg>
+                            <span>Car rental</span>
+                        </a>
+                    </li>
+                    <li class="side-nav__item">
+                        <a href="#" class="side-nav__link">
+                            <svg class="side-nav__icon">
+                                <use xlink:href="img/sprite.svg#icon-map"></use>
+                            </svg>
+                            <span>Tours</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="legal">
+                    &copy; 2017 by trillo. All rights reserved.
+                </div>
+            </nav>
+            <main class="hotel-view">
+                <div class="gallery">
+                    <figure class="gallery__item">
+                        <img src="img/car-1.jpg" alt="gallery photo of hotel" class="gallery__photo" height="250" width="300">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="img/car-2.jpg" alt="gallery photo of hotel" class="gallery__photo" height="250" width="300">
+                    </figure>
+                    <figure class="gallery__item">
+                        <img src="img/car-3.jpg" alt="gallery photo of hotel" class="gallery__photo" height="250" width="300">
+                    </figure>
+                </div>
+<!-- ///////////////////////////////////////////////////////////////////////////////  -->
+                <div class="overview">
+                    <div class="overview__heading">
+                        Hotel Las Palmas
+                    </div>
+                    <div class="overview__stars">
+                        <span class="side-nav__icon-star">⭐</span>
+                        <span class="side-nav__icon-star">⭐</span>
+                        <span class="side-nav__icon-star">⭐</span>
+                        <span class="side-nav__icon-star">⭐</span>
+                        <span class="side-nav__icon-star">⭐</span>
+                        
+                   
+                    </div>
+                    <div class="overview__location">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-star"></use>
+                        </svg>
+                        <button class="btn-inline">San Francisco, California</button>
+                        </button>
+                    </div>
+                    <div class="overview__rating">
+                        <div class="overview__rating-average">8.6</div>
+                        <div class="overview__rating-count">562 Ratings</div>
+                    </div>
+                </div>
+<!--////////////////////////////////////////// Booking Section////////////////////////////////////////////////////////////// -->
+<form action="destination.html" method ="GET" class="booking">
+
+    <fieldset class="booking__detials">
+        <legend>Car rental</legend>
+                <div class="booking__group1">
+                      
+                            <div class="booking__pick-up">
+                                    <label for="pick-up" class="booking____pick-up--label" >Pick-up</label>
+                                    <input type="text" id="pick-up" class="booking__pick-up--input" name ="pick-up"  required autofocus placeholder="Enter destination" pattern ="[a-zA_Z]{3,}" title ="Please enter more that three letters">
+                            </div>
+                            <div class="booking__drop-off">
+                                <label for="drop-off" class="booking__drop-off--label" >Drop-off</label>
+                                <input type="text" id="drop-off" class="booking__drop-off--input" name ="drop-off"  required autofocus placeholder="Enter destination" pattern ="[a-zA_Z]{3,}" title ="Please enter more that three letters">
+                            </div>
+
+           
+                </div>
+          <div class="booking__group2">  
+                        <div class="booking__dates">
+                            <label for="date" class="booking__dates--label" >Pick-up date</label>
+                            <input type="date" id="date" class="booking__pickup-dates--input" name ="date" min="2013-13-02" placeholder="Check-in date">
+                    </div>
+
+                  
+                   <div class="booking__pick-uptime">
+                        <label for="pick-up-time">Time</label>
+
+                        <select id="pick-up-time" class="booking__select ">
+                        <option value="one">One person room</option>
+                        <option value="two">Two people room</option>
+                        <option value="family">Family room</option>
+                        <option value="multiple">Multiple room</option>
+                        </select>
+                    </div>
+                            
+                    <div class="booking__dropoff-dates">
+                        <label for="date" class="booking__dates--label">Drop-off date</label>
+                        <input type="date" class="booking__dropoff-dates--input" name ="date" min="2013-13-02">
+                    </div>
+                    <div class="booking__drop-offtime">
+                        <label for="drop-off-time">Time</label>
+
+                        <select id="drop-off-time" class="booking__select ">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                  
+                        </select>
+                    </div>
+                </div>        
+                  <div class="booking__space">
+              <p>this is a margin with button</p>
+              <p>this is a margin with button</p>
+              
+          </div>          
+                    <button class="booking__button">Submit</button>       
+                   
+                    <div class="booking__space">
+                        <p>this is a margin with button</p>               
+                    </div>    
+                    
+        
+          
+    
+        </fieldset> 
+</form>
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+       
+              </main>
+          </div>
+     
+    </body>
+</html>

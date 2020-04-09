@@ -1,0 +1,68 @@
+/*
+COLORS
+
+    color1:#1a1612;
+    color2:#0c1511;
+    color3:#303625;
+
+Color4: #4b6752
+Color5: #c13f10
+Color6: #f0eeee
+Color7: #ccc
+
+Color8: #333
+Color9: #777
+COlor10: #999
+
+*/
+:root {
+    --color1:#1a1612;
+    --color2:#0c1511;
+    --color3:#303625;
+    --color4: #4b6752;
+    --color5: #c13f10;
+    --color5a: #d68d72;
+     --color6: #f0eeee;
+    --color7: #ccc;
+
+    --color8: #333;
+    --color9: #777;
+   --color10: #999;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////@extend
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////@extend
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+*{
+    margin:0;
+    padding:0;
+}
+*,
+*::before,
+*::after{
+   box-sizing: inherit; 
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-weight:400;
+    line-height: 1.6;
+    color:var(--color1);
+    background-image: linear-gradient(to right bottom, var(--color-color1),var(--color-color2));
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+}
