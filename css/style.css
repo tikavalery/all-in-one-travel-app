@@ -338,6 +338,10 @@ body {
   background-color: white;
   color: var(--color5);
 }
+.booking__trip-type {
+  display: flex;
+  flex-direction: row;
+}
 .booking__pick-up--input {
   height: 3rem;
   border-radius: 3rem;

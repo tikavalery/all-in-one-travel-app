@@ -134,7 +134,105 @@
                     </div>
                 </div>
 <!--////////////////////////////////////////// Booking Section////////////////////////////////////////////////////////////// -->
+<form action="destination.html" method ="GET" class="booking">
 
+    <fieldset class="booking__detials">
+        <legend>Flights</legend>
+                <div class="booking__group1">
+                      
+                                <div class="booking__dates">
+                                    <label for="destination" class="booking__destination--label" >From</label>
+                                    <input type="text" id="destination" class="booking__dates--input" name ="destination"  required autofocus placeholder="Enter destination" pattern ="[a-zA_Z]{3,}" title ="Please enter more that three letters">
+                                </div>
+                                <div class="booking__dates">
+                                    <label for="destination" class="booking__destination--label" >To</label>
+                                    <input type="text" id="destination" class="booking__dates--input" name ="destination"  required autofocus placeholder="Enter destination" pattern ="[a-zA_Z]{3,}" title ="Please enter more that three letters">
+                                </div>
+                            <div class="booking__dates">
+                                    <label for="date" class="booking__dates--label" >Depart</label>
+                                    <input type="date" id="date" class="booking__dates--input" name ="date" min="2013-13-02" placeholder="Check-in date">
+                            </div>
+
+                            <div class="booking__dates">
+                                <label for="date" class="booking__dates--label">Return</label>
+                                <input type="date" class="booking__dates--input" name ="date" min="2013-13-02">
+                            </div>
+
+                     
+                </div>
+          <div class="booking__group2">  
+                   <div class="booking__trip-type">
+                       <div class="booking__round-trip">
+                           <input type="radio" id="round-trip" name="trip-type" value="round-trip">
+                           <label for="round-trip">Round-trip</label>
+                       </div>
+                    <div class="booking__one-way">
+                           <input type="radio" id="one-way" name="trip-type" value="one-way">
+                    <label for="one-way">One-way</label>
+                    </div>
+                 
+                    </div>
+                       
+                    <div class="booking__class">
+                        <label for="class">Prefered Class</label>
+
+                        <select id="class" class="booking__select booking__select--adults">
+                        <option value="1">Economy</option>
+                        <option value="2">Premium Economy</option>
+                        <option value="3">Business</option>
+                        <option value="4">First</option>
+                 
+                    
+                        </select>
+                    </div>
+                    <div class="booking__adults">
+                        <label for="adults">No 0f Adults:</label>
+
+                        <select id="adults" class="booking__select booking__select--adults">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    
+                        </select>
+                    </div>
+                    <div class="booking__children">
+                        <label for="children">Children</label>
+    
+                        <select id="children"class=" booking__select  booking__select--children" >
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                     
+                       
+                    </select>
+                    </div>
+                </div>        
+                  <div class="booking__space">
+              <p>this is a margin with button</p>
+              <p>this is a margin with button</p>
+              
+          </div>          
+                    <button class="booking__button">Submit</button>       
+                   
+                    <div class="booking__space">
+                        <p>this is a margin with button</p>               
+                    </div>    
+                    
+        
+          
+    
+        </fieldset> 
+</form>
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
        
               </main>

@@ -238,6 +238,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding: 1.2rem 1.2rem;
+        
     }
     &__select{
         width: 10vw;
@@ -278,6 +279,15 @@
         color:var(--color5);
         }
     }
+////////////////////////////////////////////////////////////////////////////////////////////////////@include
+////////////Flight Section flight page
+    &__trip-type{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////@include
 ////////////Rental section rental page
      &__pick-up{
